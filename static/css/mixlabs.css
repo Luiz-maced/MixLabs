@@ -9,10 +9,11 @@ a {
 }
 
 .logo {
-    max-width: 100%; /* Certifica-se de que o logo não ultrapasse a largura do contêiner */
-    display: flex;
-    justify-content: center; /* Centraliza a logo no contêiner */
-    align-items: center;
+  max-width: 100%; /* Certifica-se de que o logo não ultrapasse a largura do contêiner */
+  height: auto; /* Mantém a proporção do logo */
+  display: flex;
+  justify-content: center; /* Centraliza o logo no contêiner */
+  align-items: center;
 }
 
 .logo-img {
@@ -112,9 +113,30 @@ section {
     text-align: center;
 }
 
-#sobre {
-    background-color: #1A1A1A;
+/* Estiliza o contêiner das seções */
+.container {
+  display: flex; /* Faz com que o contêiner use o modelo de layout flexível */
+  gap: 20px; 
+  display: flex;
+  flex-direction: column;/* Adiciona um espaço entre as seções, se necessário */
 }
+
+/* Estiliza a seção sobre */
+#sobre {
+  background-color: #1A1A1A;
+  flex: 1; /* Faz com que a seção ocupe uma proporção igual do contêiner */
+  padding: 20px;
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+}
+
+/* Estiliza a seção serviços */
+#servicos {
+  background-color: #333333; /* Defina a cor de fundo ou outros estilos conforme necessário */
+  flex: 1; /* Faz com que a seção ocupe uma proporção igual do contêiner */
+  padding: 20px;
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+}
+
 
 #servicos .service-cards {
     display: flex;
@@ -123,31 +145,7 @@ section {
     margin-top: 20px;
 }
 
-#servicos .card1 {
-    background: url('/static/edicao.png');
-    background-color: #333333;
-    padding: 20px;
-    border-radius: 10px;
-    flex-basis: 30%;
-}
 
-
-#servicos .card2 {
-    background: url('/static/tratamento.png');
-    background-color: #333333;
-    padding: 20px;
-    border-radius: 10px;
-    flex-basis: 30%;
-}
-
-
-#servicos .card3 {
-    background: url('/static/mixagem.png') no-repeat center center;
-    background-color: #333333;
-    padding: 20px;
-    border-radius: 10px;
-    flex-basis: 30%;
-}
 #portifolio {
     background-color: #1A1A1A;
 }
@@ -454,4 +452,3 @@ section.visible {
     border-radius: 9999px;
     box-shadow: inset 0 -2px 25px -4px var(--white);
   }
-  
